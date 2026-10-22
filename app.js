@@ -6,7 +6,7 @@
 // ضع رابط PDF الحقيقي في url عند رفع الكتاب. اتركه فارغاً إلى أن يتوفر الملف.
 const BOOKS = [
   { title: 'الرياضيات المتخصصة', category: 'الرياضيات', icon: 'fa-square-root-variable', color: '#b18a37', light: '#fbf2d9', url: '' },
-  { title: 'الرياضيات الأساسية', category: 'الرياضيات', icon: 'fa-calculator', color: '#5277af', light: '#e9effb', url: '' },
+  { title: 'الرياضيات الأساسية', category: 'الرياضيات', icon: 'fa-calculator', color: '#5277af', light: '#e9effb', url: 'Aljadida.schoolhttps://ivremix13-source.github.io/Aljadida.school/books/maths-basic.pdf' },
   { title: 'التربية الإسلامية', category: 'التربية', icon: 'fa-moon', color: '#42876f', light: '#e2f3eb', url: '' },
   { title: 'العلوم الهندسية', category: 'العلوم', icon: 'fa-compass-drafting', color: '#9564a8', light: '#f0e7f7', url: '' },
   { title: 'الأحياء', category: 'العلوم', icon: 'fa-leaf', color: '#418c70', light: '#e2f3e9', url: '' },
