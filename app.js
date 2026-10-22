@@ -18,9 +18,9 @@ const BOOKS = [
 // أضف بيانات التواصل هنا. اترك value فارغاً إذا لم يتم تحديد الرقم أو البريد بعد.
 // الأنواع المدعومة: phone، whatsapp، email، location، website.
 const CONTACT_ITEMS = [
-  { title: 'إدارة المدرسة', description: 'للاستفسارات العامة', type: 'phone', value: '' },
-  { title: 'شؤون الطلاب', description: 'للمتابعة والاستفسارات الطلابية', type: 'phone', value: '' },
-  { title: 'البريد الإلكتروني', description: 'للمراسلات الرسمية', type: 'email', value: '' }
+  { title: 'إدارة المدرسة', description: 'للاستفسارات العامة', type: 'phone', value: '0999498099' },
+  { title: 'شؤون الطلاب', description: 'للمتابعة والاستفسارات الطلابية', type: 'phone', value: '0120578078' },
+  { title: 'البريد الإلكتروني', description: 'للمراسلات الرسمية', type: 'email', value: 'blackft846@gmail.com' },
 ];
 
 const PAGE_NAMES = ['home', 'books', 'notes', 'guidelines', 'schedule', 'contact', 'about'];
