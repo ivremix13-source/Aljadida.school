@@ -44,7 +44,7 @@ const BOOKS = [
         icon: 'fa-compass-drafting',
         color: '#9564a8',
         light: '#f0e7f7',
-        url: ''
+        url: 'engineering.pdf'
     },
     {
         title: 'الأحياء',
@@ -76,7 +76,7 @@ const BOOKS = [
         icon: 'fa-language',
         color: '#a65e70',
         light: '#f9e9ee',
-        url: ''
+        url: 'English.pdf'
     }
 ];
 
