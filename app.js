@@ -12,8 +12,8 @@ const MAX_PDF_SIZE = 25 * 1024 * 1024;
 const CURRENT_YEAR = new Date().getFullYear();
 
 const BOOK_SLOTS = [
-  { slot: 1, title: 'الرياضيات المتخصصة', track: 'علمي هندسي' },
-  { slot: 2, title: 'الرياضيات الأساسية', track: 'علمي أحياء' },
+  { slot: 1, title: '(1)كتاب الرياضيات المتخصصة', track: 'علمي هندسي' },
+  { slot: 2, title: '(1)كتاب الرياضيات المتخصصة', track: 'علمي أحياء' },
   { slot: 3, title: 'الفيزياء', track: 'all' },
   { slot: 4, title: 'الكيمياء', track: 'all' },
   { slot: 5, title: 'الأحياء', track: 'علمي أحياء' },
