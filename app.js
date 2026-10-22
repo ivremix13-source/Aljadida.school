@@ -28,7 +28,7 @@ const BOOKS = [
         icon: 'fa-calculator',
         color: '#5277af',
         light: '#e9effb',
-        url: './books/maths-basic.pdf'
+        url: 'aljadida.schoolhttps://ivremix13-source.github.io/Aljadida.school/books/maths-basic.pdf'
     },
     {
         title: 'التربية الإسلامية',
