@@ -422,7 +422,7 @@ async function renderStudentBooks(track) {
       openLink.innerHTML = '<i class="fa-solid fa-eye"></i>';
       const downloadLink = createElement('a', 'book-action');
       downloadLink.href = url;
-      downloadLink.download = saved.fileName || `${title}.pdf`;
+      downloadLink.download = saved.كتاب الرياضيات المتخصصة (1) || `${title}.pdf`;
       downloadLink.title = 'تنزيل الكتاب';
       downloadLink.setAttribute('aria-label', `تنزيل ${title}`);
       downloadLink.innerHTML = '<i class="fa-solid fa-download"></i>';
