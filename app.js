@@ -20,7 +20,7 @@ const BOOKS = [
         icon: 'fa-square-root-variable',
         color: '#b18a37',
         light: '#fbf2d9',
-        url: ''
+        url: 'mathematics-specialized.pdf'
     },
     {
         title: 'الرياضيات الأساسية',
@@ -68,7 +68,7 @@ const BOOKS = [
         icon: 'fa-atom',
         color: '#b97943',
         light: '#faebdd',
-        url: ''
+        url: 'physics.pdf'
     },
     {
         title: 'اللغة الإنجليزية',
