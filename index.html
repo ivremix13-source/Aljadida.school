@@ -137,11 +137,212 @@
         <div class="page-container page-body"><div class="page-toolbar"><div><h2>الكتب المتاحة في الفهرس</h2><p>اختر المادة للوصول إلى تفاصيلها.</p></div><label class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="bookSearch" type="search" placeholder="ابحث عن كتاب..." autocomplete="off"><kbd>⌕</kbd></label></div><div class="books-grid" id="booksGrid"></div><div class="info-callout"><span class="callout-icon"><i class="fa-solid fa-circle-info"></i></span><div><strong>ملاحظة حول الملفات</strong><p> سوف يتم اضافة باقي الكتب قريبا نحن نعمل على ارضائكم<code>BOOKS</code><code></code>، وسيعمل زر فتح الكتاب تلقائياً.</p></div></div></div>
       </section>
 
-      <!-- صفحة المذكرات -->
-      <section class="page-view inner-page" data-page="notes" id="page-notes" aria-labelledby="notesTitle" hidden>
-        <div class="inner-hero inner-hero-notes"><div class="page-container inner-hero-content"><div class="breadcrumbs"><a href="#home" data-nav>الرئيسية</a><i class="fa-solid fa-chevron-left"></i><span>المذكرات</span></div><span class="section-kicker">YOUR STUDY COMPANION</span><h1 id="notesTitle">مذكرات قد تعينك <span>في دراستك</span></h1><p>مساحة تعليمية قيد التجهيز لتجميع المذكرات والملخصات وأوراق المراجعة في واجهة واحدة سهلة الاستخدام.</p></div><div class="inner-hero-graphic notes-graphic"><div class="note-sheet"><span class="note-line line-short"></span><span class="note-line"></span><span class="note-line"></span><span class="note-line line-mid"></span><i class="fa-solid fa-bookmark"></i></div></div></div>
-        <div class="page-container page-body coming-soon-wrap"><div class="coming-soon-card"><div class="coming-soon-orbit orbit-one"></div><div class="coming-soon-orbit orbit-two"></div><div class="coming-soon-icon"><i class="fa-solid fa-file-circle-plus"></i></div><span class="coming-soon-label">قريباً بإذن الله</span><h2>سوف يتم إضافة هذا القسم قريباً</h2><p>نعمل على تجهيز مساحة للمذكرات والملخصات الدراسية. ستظهر المواد هنا عند إضافتها.</p><a href="#books" class="button button-primary" data-nav>تصفّح الكتب الآن <i class="fa-solid fa-arrow-left"></i></a></div></div>
-      </section>
+      <!-- =====================================================
+     NOTES PAGE — مكتبة المذكرات الدراسية
+====================================================== -->
+
+<section
+    class="page-view inner-page"
+    data-page="notes"
+    id="page-notes"
+    aria-labelledby="notesTitle"
+    hidden
+>
+    <!-- رأس صفحة المذكرات -->
+    <div class="inner-hero inner-hero-notes">
+
+        <div class="page-container inner-hero-content">
+
+            <div class="breadcrumbs">
+                <a href="#home" data-nav>الرئيسية</a>
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+                <span>المذكرات</span>
+            </div>
+
+            <span class="section-kicker">
+                YOUR STUDY COMPANION
+            </span>
+
+            <h1 id="notesTitle">
+                مذكرات قد تعينك
+                <span>في دراستك</span>
+            </h1>
+
+            <p>
+                مكتبة المذكرات والملخصات الدراسية،
+                اجمع فيها ما تحتاجه من مواد المراجعة
+                واستعد لامتحاناتك بسهولة.
+            </p>
+
+        </div>
+
+        <div class="inner-hero-graphic notes-graphic">
+
+            <div class="note-sheet">
+                <span class="note-line line-short"></span>
+                <span class="note-line"></span>
+                <span class="note-line"></span>
+                <span class="note-line line-mid"></span>
+
+                <i class="fa-solid fa-bookmark"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- محتوى المكتبة -->
+    <div class="page-container page-body notes-library">
+
+        <!-- عنوان المكتبة -->
+        <div class="notes-library-heading">
+
+            <div>
+                <span class="section-kicker">
+                    SCHOOL NOTES LIBRARY
+                </span>
+
+                <h2>المكتبة الدراسية</h2>
+
+                <p>
+                    اختر المذكرة التي تحتاج إليها،
+                    ثم حمّلها بصيغة PDF.
+                </p>
+            </div>
+
+            <div class="notes-count-card">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                <div>
+                    <strong id="notesCount">0</strong>
+                    <span>مذكرة متاحة</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- البحث -->
+        <div class="notes-search-wrapper">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="notesSearch"
+                placeholder="ابحث باسم المذكرة أو المادة..."
+                aria-label="البحث في المذكرات الدراسية"
+                autocomplete="off"
+            >
+
+            <span class="notes-search-shortcut">
+                بحث
+            </span>
+
+        </div>
+
+
+        <!-- تصنيفات المواد -->
+        <div
+            class="notes-filters"
+            id="notesFilters"
+            aria-label="تصنيف المذكرات حسب المادة"
+        >
+
+            <button
+                type="button"
+                class="notes-filter is-active"
+                data-note-filter="all"
+                aria-pressed="true"
+            >
+                <i class="fa-solid fa-layer-group"></i>
+                جميع المذكرات
+            </button>
+
+            <button
+                type="button"
+                class="notes-filter"
+                data-note-filter="الرياضيات"
+                aria-pressed="false"
+            >
+                الرياضيات
+            </button>
+
+            <button
+                type="button"
+                class="notes-filter"
+                data-note-filter="الفيزياء"
+                aria-pressed="false"
+            >
+                الفيزياء
+            </button>
+
+            <button
+                type="button"
+                class="notes-filter"
+                data-note-filter="الكيمياء"
+                aria-pressed="false"
+            >
+                الكيمياء
+            </button>
+
+            <button
+                type="button"
+                class="notes-filter"
+                data-note-filter="الأحياء"
+                aria-pressed="false"
+            >
+                الأحياء
+            </button>
+
+            <button
+                type="button"
+                class="notes-filter"
+                data-note-filter="اللغة الإنجليزية"
+                aria-pressed="false"
+            >
+                اللغة الإنجليزية
+            </button>
+
+        </div>
+
+
+        <!-- المذكرات التي ينشئها app.js -->
+        <div
+            id="notesGrid"
+            class="notes-grid"
+            aria-live="polite"
+        ></div>
+
+
+        <!-- حالة عدم وجود مذكرات -->
+        <noscript>
+            <p>
+                يرجى تفعيل JavaScript لعرض المذكرات الدراسية.
+            </p>
+        </noscript>
+
+
+        <!-- ملاحظة أسفل المكتبة -->
+        <div class="notes-library-footer">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <p>
+                تتم إضافة المذكرات إلى هذه المكتبة
+                عند رفع ملفاتها إلى مستودع المدرسة.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
       <!-- صفحة التعليمات -->
       <section class="page-view inner-page" data-page="guidelines" id="page-guidelines" aria-labelledby="guidelinesTitle" hidden>
