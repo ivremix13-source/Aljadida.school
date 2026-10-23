@@ -1,17 +1,21 @@
 /* =========================================================
    المدرسة الجديدة الثانوية النموذجية بنين
-   APP.JS — إدارة الصفحات والكتب والتواصل والتفاعلات
+   APP.JS — SCHOOL PORTAL
+   Books • Notes • Navigation • Contacts • Interactions
 ========================================================= */
+
+'use strict';
+
 
 // =========================================================
 // 1. بيانات الكتب الدراسية
 // =========================================================
-// ضع ملفات PDF داخل مجلد books في مستودع GitHub.
-// مثال:
-// books/maths-basic.pdf
-//
-// استخدم مسارات نسبية تبدأ بـ ./books/
+// ضع ملفات الكتب داخل مجلد books في مستودع GitHub.
+// استخدم المسارات النسبية التي تبدأ بـ ./books/.
 // اترك url فارغاً إذا لم ترفع الكتاب بعد.
+//
+// مثال:
+// ./books/mathematics-basic.pdf
 
 const BOOKS = [
     {
@@ -20,7 +24,7 @@ const BOOKS = [
         icon: 'fa-square-root-variable',
         color: '#b18a37',
         light: '#fbf2d9',
-        url: 'mathematics-specialized.pdf'
+        url: './books/mathematics-specialized.pdf'
     },
     {
         title: 'الرياضيات الأساسية',
@@ -28,7 +32,7 @@ const BOOKS = [
         icon: 'fa-calculator',
         color: '#5277af',
         light: '#e9effb',
-        url: 'mathematics-basic.pdf'
+        url: './books/mathematics-basic.pdf'
     },
     {
         title: 'التربية الإسلامية',
@@ -44,7 +48,7 @@ const BOOKS = [
         icon: 'fa-compass-drafting',
         color: '#9564a8',
         light: '#f0e7f7',
-        url: 'engineering.pdf'
+        url: './books/engineering.pdf'
     },
     {
         title: 'الأحياء',
@@ -68,7 +72,7 @@ const BOOKS = [
         icon: 'fa-atom',
         color: '#b97943',
         light: '#faebdd',
-        url: 'physics.pdf'
+        url: './books/physics.pdf'
     },
     {
         title: 'اللغة الإنجليزية',
@@ -76,17 +80,78 @@ const BOOKS = [
         icon: 'fa-language',
         color: '#a65e70',
         light: '#f9e9ee',
-        url: 'English.pdf'
+        url: './books/English.pdf'
     }
 ];
 
 
 // =========================================================
-// 2. بيانات التواصل
+// 2. بيانات المذكرات الدراسية
 // =========================================================
-// يمكنك تعديل الأرقام والبريد الإلكتروني من هنا.
-// الأنواع المدعومة:
-// phone, whatsapp, email, location, website
+// المذكرات منفصلة تماماً عن الكتب.
+//
+// ارفع ملفات PDF إلى مجلد notes في GitHub.
+// ثم ضع المسار الصحيح لكل ملف هنا.
+//
+// مثال:
+// ./notes/physics-revision.pdf
+//
+// لإضافة مذكرة جديدة:
+// انسخ أحد العناصر، وعدّل بياناته ومسار الملف.
+// لا تحتاج إلى تعديل بقية وظائف الموقع.
+
+const NOTES = [
+    {
+        title: 'مذكرة الرياضيات المتخصصة',
+        subject: 'الرياضيات المتخصصة',
+        description: 'مذكرة مساعدة للمراجعة والاستعداد للامتحانات.',
+        icon: 'fa-square-root-variable',
+        color: '#b18a37',
+        light: '#fbf2d9',
+        url: './notes/mathematics-specialized.pdf'
+    },
+    {
+        title: 'مراجعة الفيزياء',
+        subject: 'الفيزياء',
+        description: 'مذكرة للمراجعة والتدريب على المادة.',
+        icon: 'fa-atom',
+        color: '#5277af',
+        light: '#e9effb',
+        url: './notes/physics-revision.pdf'
+    },
+    {
+        title: 'ملخص الكيمياء',
+        subject: 'الكيمياء',
+        description: 'ملخص دراسي للمساعدة في المراجعة.',
+        icon: 'fa-flask',
+        color: '#438ca1',
+        light: '#e1f3f7',
+        url: './notes/chemistry-summary.pdf'
+    },
+    {
+        title: 'مذكرة الأحياء',
+        subject: 'الأحياء',
+        description: 'مادة مساعدة للمذاكرة والمراجعة.',
+        icon: 'fa-leaf',
+        color: '#418c70',
+        light: '#e2f3e9',
+        url: './notes/biology.pdf'
+    },
+    {
+        title: 'مراجعة اللغة الإنجليزية',
+        subject: 'اللغة الإنجليزية',
+        description: 'مذكرة للمراجعة والتدريب.',
+        icon: 'fa-language',
+        color: '#a65e70',
+        light: '#f9e9ee',
+        url: './notes/english-revision.pdf'
+    }
+];
+
+
+// =========================================================
+// 3. بيانات التواصل
+// =========================================================
 
 const CONTACT_ITEMS = [
     {
@@ -111,7 +176,7 @@ const CONTACT_ITEMS = [
 
 
 // =========================================================
-// 3. الإعدادات العامة
+// 4. إعدادات الموقع العامة
 // =========================================================
 
 const PAGE_NAMES = [
@@ -134,7 +199,7 @@ const $$ = (selector, root = document) =>
 
 
 // =========================================================
-// 4. حماية النصوص المعروضة داخل HTML
+// 5. حماية النصوص المعروضة داخل HTML
 // =========================================================
 
 function safeText(value) {
@@ -149,7 +214,7 @@ function safeText(value) {
 
 
 // =========================================================
-// 5. رسائل التنبيه
+// 6. رسائل التنبيه
 // =========================================================
 
 function showToast(message) {
@@ -157,7 +222,7 @@ function showToast(message) {
     const messageNode = $('#toastMessage');
 
     if (!toast || !messageNode) {
-        alert(message);
+        console.info('[School Portal]', message);
         return;
     }
 
@@ -174,7 +239,7 @@ function showToast(message) {
 
 
 // =========================================================
-// 6. إدارة الصفحات
+// 7. إدارة الصفحات
 // =========================================================
 
 function normalizePage(hash) {
@@ -193,7 +258,6 @@ function closeMobileMenu() {
     const toggle = $('#menuToggle');
 
     nav?.classList.remove('is-open');
-
     toggle?.classList.remove('is-open');
 
     toggle?.setAttribute('aria-expanded', 'false');
@@ -211,12 +275,15 @@ function showPage(pageName, updateHistory = false) {
         const active = view.dataset.page === page;
 
         view.classList.toggle('is-visible', active);
-
         view.hidden = !active;
     });
 
     $$('[data-nav]').forEach(link => {
         const href = link.getAttribute('href');
+
+        if (!href || !href.startsWith('#')) {
+            return;
+        }
 
         const linkPage = normalizePage(href);
 
@@ -259,7 +326,7 @@ function showPage(pageName, updateHistory = false) {
 
 
 // =========================================================
-// 7. إعداد التنقل بين الأقسام
+// 8. إعداد التنقل بين الأقسام
 // =========================================================
 
 function setupNavigation() {
@@ -273,9 +340,7 @@ function setupNavigation() {
 
             event.preventDefault();
 
-            const page = normalizePage(href);
-
-            showPage(page, true);
+            showPage(normalizePage(href), true);
         });
     });
 
@@ -310,7 +375,6 @@ function setupNavigation() {
         const open = !nav.classList.contains('is-open');
 
         nav.classList.toggle('is-open', open);
-
         toggle.classList.toggle('is-open', open);
 
         toggle.setAttribute(
@@ -340,7 +404,7 @@ function setupNavigation() {
 
 
 // =========================================================
-// 8. إنشاء اسم مناسب لملف الكتاب
+// 9. إنشاء اسم مناسب لملف PDF
 // =========================================================
 
 function createBookFileName(title) {
@@ -349,31 +413,24 @@ function createBookFileName(title) {
         .replace(/[\\/:*?"<>|]/g, '-')
         .replace(/\s+/g, '-');
 
-    return `${normalized}.pdf`;
+    return `${normalized || 'document'}.pdf`;
 }
 
 
 // =========================================================
-// 9. تنزيل الكتاب الدراسي
+// 10. تنزيل ملف PDF
 // =========================================================
-// ملاحظة:
-// ملفات PDF الموجودة داخل المستودع نفسه يمكن طلب تنزيلها
-// باستخدام fetch ثم إنشاء رابط تنزيل.
-//
-// إذا كانت الاستضافة تمنع جلب الملف أو تعذّر تنزيله،
-// نعرض رابطاً مباشراً للملف بدلاً من ترك الزر دون استجابة.
+// تستخدم هذه الدالة للكتب والمذكرات.
+// تحاول تنزيل الملف أولاً، ثم تعرض رابط الملف
+// مباشرة إذا فشلت محاولة التنزيل.
 
-async function downloadBook(book, button) {
-    if (!book || !book.url || !book.url.trim()) {
-        showToast(
-            `لم يُرفع ملف «${book?.title || 'الكتاب'}» بعد.`
-        );
-
+async function downloadPDF(item, button, type = 'الملف') {
+    if (!item || !item.url || !item.url.trim()) {
+        showToast(`ملف ${type} غير متوفر حالياً.`);
         return;
     }
 
-    const url = book.url.trim();
-
+    const url = item.url.trim();
     const originalContent = button.innerHTML;
 
     button.disabled = true;
@@ -386,82 +443,62 @@ async function downloadBook(book, button) {
     `;
 
     try {
-        // محاولة تنزيل الملف مباشرة.
         const response = await fetch(url);
 
         if (!response.ok) {
             throw new Error(
-                `تعذر الوصول إلى الملف (${response.status})`
+                `HTTP ${response.status}`
             );
         }
 
         const blob = await response.blob();
 
+        // التأكد من عدم تنزيل صفحة HTML على أنها PDF.
         if (
             blob.type &&
-            !blob.type.includes('pdf') &&
-            blob.type !== 'application/octet-stream'
+            !blob.type.toLowerCase().includes('pdf') &&
+            blob.type !== 'application/octet-stream' &&
+            blob.type !== 'application/force-download'
         ) {
-            throw new Error(
-                'الرابط لا يعيد ملف PDF صالحاً.'
-            );
+            throw new Error('الملف المستلم ليس PDF صالحاً.');
         }
 
         const objectURL = URL.createObjectURL(blob);
+        const link = document.createElement('a');
 
-        const downloadLink = document.createElement('a');
+        link.href = objectURL;
+        link.download = createBookFileName(item.title);
+        link.style.display = 'none';
 
-        downloadLink.href = objectURL;
-
-        downloadLink.download = createBookFileName(
-            book.title
-        );
-
-        downloadLink.style.display = 'none';
-
-        document.body.appendChild(downloadLink);
-
-        downloadLink.click();
-
-        downloadLink.remove();
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
 
         window.setTimeout(() => {
             URL.revokeObjectURL(objectURL);
-        }, 1500);
+        }, 3000);
 
-        showToast(
-            `بدأ تنزيل كتاب «${book.title}».`
-        );
+        showToast(`بدأ تنزيل «${item.title}».`);
 
     } catch (error) {
         console.error(
-            'Book download error:',
+            `PDF download error (${type}):`,
             error
         );
 
-        // احتياط: فتح الملف مباشرة إذا منع المتصفح fetch.
-        // يعمل هذا خصوصاً عندما تكون المشكلة متعلقة
-        // بسياسات CORS أو بإعدادات الاستضافة.
+        // فتح الملف مباشرة كحل احتياطي.
         const directLink = document.createElement('a');
 
         directLink.href = url;
-
         directLink.target = '_blank';
-
         directLink.rel = 'noopener noreferrer';
 
-        directLink.download = createBookFileName(
-            book.title
-        );
-
         document.body.appendChild(directLink);
-
         directLink.click();
-
         directLink.remove();
 
         showToast(
-            'تعذر التنزيل المباشر. حاول من صفحة الملف التي فُتحت.'
+            'تعذر التنزيل التلقائي. تحقق من وجود الملف وحاول مرة أخرى.'
         );
 
     } finally {
@@ -475,7 +512,7 @@ async function downloadBook(book, button) {
 
 
 // =========================================================
-// 10. عرض الكتب في المكتبة
+// 11. عرض الكتب الدراسية
 // =========================================================
 
 function renderBooks(filter = '') {
@@ -501,10 +538,7 @@ function renderBooks(filter = '') {
         container.innerHTML = `
             <div class="empty-state">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <p>
-                    لا توجد كتب تطابق عبارة البحث.
-                    جرّب كلمة أخرى.
-                </p>
+                <p>لا توجد كتب تطابق عبارة البحث.</p>
             </div>
         `;
 
@@ -512,11 +546,8 @@ function renderBooks(filter = '') {
     }
 
     container.innerHTML = filtered.map(book => {
-        const originalIndex = BOOKS.indexOf(book) + 1;
-
-        const ready = Boolean(
-            book.url && book.url.trim()
-        );
+        const originalIndex = BOOKS.indexOf(book);
+        const ready = Boolean(book.url?.trim());
 
         return `
             <article
@@ -528,7 +559,7 @@ function renderBooks(filter = '') {
             >
                 <div class="book-item-top">
                     <span class="book-number">
-                        BOOK / ${String(originalIndex).padStart(2, '0')}
+                        BOOK / ${String(originalIndex + 1).padStart(2, '0')}
                     </span>
 
                     <span class="book-symbol">
@@ -546,14 +577,14 @@ function renderBooks(filter = '') {
                 <div class="book-item-bottom">
                     <span class="book-type">
                         <i class="fa-regular fa-file-pdf"></i>
-                        ${ready ? 'ملف متاح' : 'ملف قيد الإضافة'}
+                        ${ready ? 'ملف مضاف' : 'لم يُضف الملف بعد'}
                     </span>
 
                     <button
                         type="button"
                         class="book-open-button ${ready ? 'is-ready' : ''}"
-                        data-book-index="${originalIndex - 1}"
-                        ${ready ? '' : 'aria-label="الكتاب غير متاح حالياً"'}
+                        data-book-index="${originalIndex}"
+                        ${ready ? '' : 'disabled'}
                     >
                         ${
                             ready
@@ -568,34 +599,163 @@ function renderBooks(filter = '') {
 
     $$('.book-open-button', container).forEach(button => {
         button.addEventListener('click', async () => {
-            const index = Number(
-                button.dataset.bookIndex
-            );
-
-            const book = BOOKS[index];
+            const book = BOOKS[
+                Number(button.dataset.bookIndex)
+            ];
 
             if (!book) {
                 showToast('تعذر العثور على بيانات الكتاب.');
-
                 return;
             }
 
-            if (!book.url || !book.url.trim()) {
-                showToast(
-                    `لم يُرفع ملف «${book.title}» بعد. أضف رابط PDF في مصفوفة BOOKS داخل app.js.`
-                );
-
-                return;
-            }
-
-            await downloadBook(book, button);
+            await downloadPDF(book, button, 'الكتاب');
         });
     });
 }
 
 
 // =========================================================
-// 11. تحديث إحصائيات الكتب
+// 12. مكتبة المذكرات الدراسية
+// =========================================================
+// مستقلة تماماً عن الكتب.
+// تتطلب وجود العنصر #notesGrid داخل صفحة المذكرات.
+
+function renderNotes(filter = '') {
+    const container = $('#notesGrid');
+
+    if (!container) {
+        // عدم إظهار أخطاء إذا كان HTML لم يُربط بعد.
+        return;
+    }
+
+    const query = String(filter)
+        .trim()
+        .toLocaleLowerCase('ar');
+
+    const filtered = NOTES.filter(note => {
+        const searchableText = [
+            note.title,
+            note.subject,
+            note.description
+        ]
+            .join(' ')
+            .toLocaleLowerCase('ar');
+
+        return searchableText.includes(query);
+    });
+
+    if (!filtered.length) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <p>
+                    لا توجد مذكرات تطابق بحثك.
+                    جرّب كلمة أخرى.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    container.innerHTML = filtered.map(note => {
+        const index = NOTES.indexOf(note);
+        const ready = Boolean(note.url?.trim());
+
+        return `
+            <article
+                class="note-item"
+                style="
+                    --note-color:${safeText(note.color || '#b18a37')};
+                    --note-light:${safeText(note.light || '#fbf2d9')};
+                "
+            >
+                <div class="note-item-top">
+                    <span class="note-number">
+                        NOTE / ${String(index + 1).padStart(2, '0')}
+                    </span>
+
+                    <span class="note-item-icon">
+                        <i class="fa-solid ${safeText(note.icon || 'fa-file-pdf')}"></i>
+                    </span>
+                </div>
+
+                <div class="note-item-content">
+                    <span class="note-subject">
+                        ${safeText(note.subject || 'مذكرة دراسية')}
+                    </span>
+
+                    <h3>${safeText(note.title)}</h3>
+
+                    <p>
+                        ${safeText(note.description || '')}
+                    </p>
+                </div>
+
+                <div class="note-item-bottom">
+                    <span class="note-file-type">
+                        <i class="fa-regular fa-file-pdf"></i>
+                        ${ready ? 'ملف PDF مضاف' : 'الملف غير متاح'}
+                    </span>
+
+                    <button
+                        type="button"
+                        class="note-download-button ${ready ? 'is-ready' : ''}"
+                        data-note-index="${index}"
+                        ${ready ? '' : 'disabled'}
+                    >
+                        ${
+                            ready
+                                ? '<i class="fa-solid fa-download"></i> تحميل المذكرة'
+                                : 'قريباً'
+                        }
+                    </button>
+                </div>
+            </article>
+        `;
+    }).join('');
+
+    $$('.note-download-button', container).forEach(button => {
+        button.addEventListener('click', async () => {
+            const note = NOTES[
+                Number(button.dataset.noteIndex)
+            ];
+
+            if (!note) {
+                showToast('تعذر العثور على بيانات المذكرة.');
+                return;
+            }
+
+            await downloadPDF(note, button, 'المذكرة');
+        });
+    });
+}
+
+
+// =========================================================
+// 13. البحث في الكتب والمذكرات
+// =========================================================
+
+function setupLibrarySearch() {
+    $('#bookSearch')?.addEventListener(
+        'input',
+        event => {
+            renderBooks(event.target.value);
+        }
+    );
+
+    $('#notesSearch')?.addEventListener(
+        'input',
+        event => {
+            renderNotes(event.target.value);
+        }
+    );
+}
+
+
+// =========================================================
+// 14. تحديث إحصائيات الكتب
 // =========================================================
 
 function renderFeaturedBooks() {
@@ -610,7 +770,7 @@ function renderFeaturedBooks() {
 
 
 // =========================================================
-// 12. أيقونات التواصل
+// 15. أيقونات التواصل
 // =========================================================
 
 const CONTACT_ICONS = {
@@ -623,13 +783,11 @@ const CONTACT_ICONS = {
 
 
 // =========================================================
-// 13. إنشاء روابط التواصل
+// 16. إنشاء روابط التواصل
 // =========================================================
 
 function contactHref(item) {
-    const value = String(
-        item.value || ''
-    ).trim();
+    const value = String(item.value || '').trim();
 
     if (!value) {
         return '';
@@ -665,7 +823,7 @@ function contactHref(item) {
 
 
 // =========================================================
-// 14. عرض معلومات التواصل
+// 17. عرض معلومات التواصل
 // =========================================================
 
 function renderContacts() {
@@ -676,10 +834,7 @@ function renderContacts() {
     }
 
     container.innerHTML = CONTACT_ITEMS.map(item => {
-        const value = String(
-            item.value || ''
-        ).trim();
-
+        const value = String(item.value || '').trim();
         const href = contactHref(item);
 
         const iconClass =
@@ -705,14 +860,20 @@ function renderContacts() {
                 buttonText = 'عرض الموقع';
             }
 
-            const external =
-                ['website', 'whatsapp', 'location']
-                    .includes(item.type);
+            const external = [
+                'website',
+                'whatsapp',
+                'location'
+            ].includes(item.type);
 
             button = `
                 <a
                     href="${safeText(href)}"
-                    ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}
+                    ${
+                        external
+                            ? 'target="_blank" rel="noopener noreferrer"'
+                            : ''
+                    }
                 >
                     ${buttonText}
                     <i class="fa-solid fa-arrow-left"></i>
@@ -760,17 +921,13 @@ function renderContacts() {
 
 
 // =========================================================
-// 15. التفاعلات العامة
+// 18. التفاعلات العامة
 // =========================================================
 
 function setupInteractions() {
-    $('#bookSearch')?.addEventListener(
-        'input',
-        event => renderBooks(event.target.value)
-    );
+    setupLibrarySearch();
 
     const backToTop = $('#backToTop');
-
     const header = $('#siteHeader');
 
     window.addEventListener('scroll', () => {
@@ -790,20 +947,20 @@ function setupInteractions() {
     });
 
     backToTop?.addEventListener('click', () => {
+        const reducedMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
+
         window.scrollTo({
             top: 0,
-            behavior: window.matchMedia(
-                '(prefers-reduced-motion: reduce)'
-            ).matches
-                ? 'auto'
-                : 'smooth'
+            behavior: reducedMotion ? 'auto' : 'smooth'
         });
     });
 }
 
 
 // =========================================================
-// 16. تحميل شعار المدرسة
+// 19. تحميل شعار المدرسة
 // =========================================================
 
 function setupSchoolLogos() {
@@ -832,15 +989,8 @@ function setupSchoolLogos() {
             }
         };
 
-        image.addEventListener(
-            'load',
-            handleSuccess
-        );
-
-        image.addEventListener(
-            'error',
-            handleError
-        );
+        image.addEventListener('load', handleSuccess);
+        image.addEventListener('error', handleError);
 
         if (image.complete) {
             if (image.naturalWidth > 0) {
@@ -854,12 +1004,11 @@ function setupSchoolLogos() {
 
 
 // =========================================================
-// 17. شاشة التحميل الأولية
+// 20. شاشة التحميل الأولية
 // =========================================================
 
 function startPreloader() {
     const preloader = $('#preloader');
-
     const shell = $('#siteShell');
 
     let finished = false;
@@ -872,7 +1021,6 @@ function startPreloader() {
         finished = true;
 
         preloader?.classList.add('is-done');
-
         shell?.classList.add('is-ready');
 
         window.setTimeout(() => {
@@ -880,8 +1028,8 @@ function startPreloader() {
         }, 800);
     };
 
-    // إخفاء شاشة التحميل حتى لو تأخر الإنترنت.
-    window.setTimeout(hide, 1250);
+    // ضمان إخفاء شاشة التحميل حتى لو تأخر الإنترنت.
+    window.setTimeout(hide, 1500);
 
     window.addEventListener('load', () => {
         window.setTimeout(hide, 350);
@@ -892,7 +1040,7 @@ function startPreloader() {
 
 
 // =========================================================
-// 18. تشغيل الموقع
+// 21. تشغيل الموقع
 // =========================================================
 
 function initPortal() {
@@ -901,6 +1049,8 @@ function initPortal() {
     setupNavigation();
 
     renderBooks();
+
+    renderNotes();
 
     renderFeaturedBooks();
 
@@ -926,7 +1076,7 @@ function initPortal() {
 
 
 // =========================================================
-// 19. بدء التنفيذ بعد تحميل HTML
+// 22. بدء التنفيذ بعد تحميل HTML
 // =========================================================
 
 if (document.readyState === 'loading') {
@@ -937,4 +1087,4 @@ if (document.readyState === 'loading') {
     );
 } else {
     initPortal();
-       }
+}
