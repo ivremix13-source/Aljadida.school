@@ -144,7 +144,7 @@ const NOTES = [
         icon: 'fa-language',
         color: '#a65e70',
         light: '#f9e9ee',
-        url: './notes/english-revision.pdf'
+        url: './notes/grammar.pdf'
     }
 ];
 
