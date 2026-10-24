@@ -24,7 +24,7 @@ const BOOKS = [
         icon: 'fa-square-root-variable',
         color: '#b18a37',
         light: '#fbf2d9',
-        url: './books/mathematics-specialized.pdf'
+        url: '.mathematics-specialized.pdf'
     },
     {
         title: 'الرياضيات الأساسية',
@@ -32,7 +32,7 @@ const BOOKS = [
         icon: 'fa-calculator',
         color: '#5277af',
         light: '#e9effb',
-        url: './books/mathematics-basic.pdf'
+        url: '.mathematics-basic.pdf'
     },
     {
         title: 'التربية الإسلامية',
@@ -48,7 +48,7 @@ const BOOKS = [
         icon: 'fa-compass-drafting',
         color: '#9564a8',
         light: '#f0e7f7',
-        url: './books/engineering.pdf'
+        url: '.engineering.pdf'
     },
     {
         title: 'الأحياء',
@@ -72,7 +72,7 @@ const BOOKS = [
         icon: 'fa-atom',
         color: '#b97943',
         light: '#faebdd',
-        url: './books/physics.pdf'
+        url: '.physics.pdf'
     },
     {
         title: 'اللغة الإنجليزية',
@@ -80,7 +80,7 @@ const BOOKS = [
         icon: 'fa-language',
         color: '#a65e70',
         light: '#f9e9ee',
-        url: './books/English.pdf'
+        url: '.English.pdf'
     }
 ];
 
@@ -108,7 +108,7 @@ const NOTES = [
         icon: 'fa-square-root-variable',
         color: '#b18a37',
         light: '#fbf2d9',
-        url: './notes/mathematics-specialized.pdf'
+        url: '.mathematics-specialized.pdf'
     },
     {
         title: 'مراجعة الفيزياء',
@@ -117,7 +117,7 @@ const NOTES = [
         icon: 'fa-atom',
         color: '#5277af',
         light: '#e9effb',
-        url: './notes/physics-revision.pdf'
+        url: '.physics-revision.pdf'
     },
     {
         title: 'ملخص الكيمياء',
@@ -144,7 +144,7 @@ const NOTES = [
         icon: 'fa-language',
         color: '#a65e70',
         light: '#f9e9ee',
-        url: './notes/grammar.pdf'
+        url: '.grammar.pdf'
     }
 ];
 
