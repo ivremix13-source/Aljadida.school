@@ -90,7 +90,6 @@ const LIBRARY_OVERRIDES = {
    'reference-05': { title: 'التباديل والتوافيق - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات الاساسية', description: 'تعلم حيل التباديل والتوافيق باأدق صورها ', file: 'التباديل والتوافيق.pdf' }
    'reference-06': { title: 'الدوال والنهايات - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصصة', description: 'الدوال والنهايات - شرح مثالي', file: 'مذكرة دوال والنهايات .pdf' }
    'reference-07': { title: 'الاحصاء - الرياضيات الاساسية', kind: 'مذكرة', subject: 'الرياضيات الاساسية', description: 'تعرف على تاثير الاحصاء في حياتنا اليومية', file: 'مذكرة الإحصاء مدرسة المعالي.pdf' }
-
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
   const item = LIBRARY_ITEMS.find(entry => entry.id === id);
