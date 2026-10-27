@@ -78,7 +78,7 @@ for (let i = 1; i <= 20; i++) {
 const LIBRARY_OVERRIDES = {
   // 'grade1-01': { title: 'الرياضيات — الصف الأول', subject: 'رياضيات', description: 'الكتاب المدرسي المعتمد.', file: 'assets/pdfs/grade-one-math.pdf' },
   // 'grade2-01': { title: 'اسم الكتاب — الصف الثاني', subject: 'اسم المادة', description: 'وصف مختصر للكتاب.', file: 'assets/pdfs/grade-two-book.pdf' },
-  // 'grade3-eng-01': { title: 'اسم كتاب المسار الهندسي', subject: 'اسم المادة', description: 'وصف مختصر للكتاب.', file: 'assets/pdfs/grade-three-engineering.pdf' },
+   'grade3-eng-01': { title: 'الصف الثالث ثانوي', subject: 'الهندسية', description: 'وصف مختصر للكتاب.', file: 'engineering.pdf' },
   // 'reference-01': { title: 'امتحان سابق — اسم المادة', kind: 'امتحان سابق', subject: 'اسم المادة', description: 'الدور أو العام الدراسي.', file: 'assets/pdfs/past-exam.pdf' }
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
