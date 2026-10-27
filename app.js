@@ -127,7 +127,7 @@ const LIBRARY_OVERRIDES = {
     kind: 'مذكرة',
     subject: 'الرياضيات المتخصصة',
     description: 'تعلم اشتقاق الدوال بسهولة وسرعة',
-    file: 'التفاضل وتطبيقاته.pdf'
+    file: 'PDF6.pdf'
   },
 
   'reference-03': {
@@ -135,7 +135,7 @@ const LIBRARY_OVERRIDES = {
     kind: 'مذكرة',
     subject: 'الرياضيات المتخصص',
     description: 'التكامل هو عملية عكسية للتفاضل',
-    file: 'PDF1.pdf'
+    file: 'PDF5.pdf'
   },
 
   'reference-04': {
@@ -151,7 +151,7 @@ const LIBRARY_OVERRIDES = {
     kind: 'مذكرة',
     subject: 'الرياضيات الاساسية',
     description: 'تعلم حيل التباديل والتوافيق باأدق صورها ',
-    file: 'التباديل والتوافيق.pdf'
+    file: 'PDF1.pdf'
   },
 
   'reference-06': {
@@ -167,7 +167,7 @@ const LIBRARY_OVERRIDES = {
     kind: 'مذكرة',
     subject: 'الرياضيات الاساسية',
     description: 'تعرف على تاثير الاحصاء في حياتنا اليومية',
-    file: 'مذكرة الإحصاء مدرسة المعالي.pdf'
+    file: 'PDF4.pdf'
   }
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
