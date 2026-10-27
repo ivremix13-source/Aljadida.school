@@ -53,7 +53,7 @@ function addLibrarySlots({ count, idPrefix, grade, stream = '', kind = 'كتاب
 // الصف الأول: 13 كتاباً.
 addLibrarySlots({ count: 13, idPrefix: 'grade1', grade: 'الصف الأول', titlePrefix: 'كتاب الصف الأول' });
 // الصف الثاني: 13 كتاباً.
-addLibrarySlots({ count: 01, idPrefix: 'grade2', grade: 'الصف الثاني', titlePrefix: 'كتاب الصف الثاني' });
+addLibrarySlots({ count: 02, idPrefix: 'grade2', grade: 'الصف الثاني', titlePrefix: 'كتاب الصف الثاني' });
 // الصف الثالث: 10 كتب لكل مسار، حتى تكون مواد كل مسار مستقلة ومنظمة.
 addLibrarySlots({ count: 05, idPrefix: 'grade3-eng', grade: 'الصف الثالث', stream: 'المسار الهندسي', titlePrefix: 'كتاب المسار الهندسي' });
 addLibrarySlots({ count: 10, idPrefix: 'grade3-science', grade: 'الصف الثالث', stream: 'مسار علوم الحاسوب / الأحياء', titlePrefix: 'كتاب مسار علوم الحاسوب / الأحياء' });
@@ -78,6 +78,7 @@ for (let i = 1; i <= 7; i++) {
 const LIBRARY_OVERRIDES = {
   // 'grade1-01': { title: 'الرياضيات — الصف الأول', subject: 'رياضيات', description: 'الكتاب المدرسي المعتمد.', file: 'assets/pdfs/grade-one-math.pdf' },
   'grade2-01': { title: 'العلوم الهندسية — الصف الثاني', subject: 'الهندسية', description: 'كتاب العلوم الهندسية للصف الثاني مقرر جديد كليا.', file: 'PDF8.pdf' },
+  'grade2-01': { title: 'الرياضيات — الصف الثاني', subject: 'الرياضيات', description: 'كتاب العلوم الرياضيات للصف الثاني مقرر جديد كليا.', file: 'PDF9.pdf' },
 
   'grade3-eng-01': {
     title: 'العلوم الهندسية',
