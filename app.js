@@ -55,12 +55,12 @@ addLibrarySlots({ count: 13, idPrefix: 'grade1', grade: 'الصف الأول', t
 // الصف الثاني: 13 كتاباً.
 addLibrarySlots({ count: 13, idPrefix: 'grade2', grade: 'الصف الثاني', titlePrefix: 'كتاب الصف الثاني' });
 // الصف الثالث: 10 كتب لكل مسار، حتى تكون مواد كل مسار مستقلة ومنظمة.
-addLibrarySlots({ count: 10, idPrefix: 'grade3-eng', grade: 'الصف الثالث', stream: 'المسار الهندسي', titlePrefix: 'كتاب المسار الهندسي' });
+addLibrarySlots({ count: 05, idPrefix: 'grade3-eng', grade: 'الصف الثالث', stream: 'المسار الهندسي', titlePrefix: 'كتاب المسار الهندسي' });
 addLibrarySlots({ count: 10, idPrefix: 'grade3-science', grade: 'الصف الثالث', stream: 'مسار علوم الحاسوب / الأحياء', titlePrefix: 'كتاب مسار علوم الحاسوب / الأحياء' });
 addLibrarySlots({ count: 10, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
 const referenceKinds = ['مرجع', 'مذكرة', 'امتحان سابق', 'ملخص'];
-for (let i = 1; i <= 20; i++) {
+for (let i = 1; i <= 7; i++) {
   LIBRARY_ITEMS.push({
     id: `reference-${String(i).padStart(2, '0')}`,
     title: `أضف عنوان المرجع أو المذكرة (${String(i).padStart(2, '0')})`,
@@ -147,7 +147,7 @@ const LIBRARY_OVERRIDES = {
   },
 
   'reference-05': {
-    title: 'التباديل والتوافيق - الرياضيات المتخصصة',
+    title: 'التباديل والتوافيق - الرياضيات الاساسية',
     kind: 'مذكرة',
     subject: 'الرياضيات الاساسية',
     description: 'تعلم حيل التباديل والتوافيق باأدق صورها ',
