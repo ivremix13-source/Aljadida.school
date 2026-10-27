@@ -85,10 +85,10 @@ const LIBRARY_OVERRIDES = {
    'grade3-eng-05': { title: 'الفيزياء', subject: 'مشترك', description: 'تعلم كيف تجري الحياة حولك بقوانينها', file: 'physics.pdf' },
    'reference-01': { title: 'grammar - اللغة الانجليزية', kind: 'مذكرة', subject: 'اللغة الانجليزية', description: 'اساسيات اللغة الانجليزية بين يديك وفي مكان واحد', file: 'grammar.pdf' }
    'reference-02': { title: 'التفاضل - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصصة', description: 'تعلم اشتقاق الدوال بسهولة وسرعة', file: 'التفاضل وتطبيقاته.pdf' }
-   'reference-03': { title: 'التكامل - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصص', description: 'التكامل هو عملية عكسية للتفاضل', file: 'مطبوعة تكامل شاملة.pdf' }
-   'reference-04': { title: 'الدائرة - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصصة', description: 'الدائرة بشرح مبسط وانيق', file: 'مذكرة الدائـرة.pdf' }
+   'reference-03': { title: 'التكامل - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصص', description: 'التكامل هو عملية عكسية للتفاضل', file: 'PDF1.pdf' }
+   'reference-04': { title: 'الدائرة - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصصة', description: 'الدائرة بشرح مبسط وانيق', file: 'PDF2.pdf.' }
    'reference-05': { title: 'التباديل والتوافيق - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات الاساسية', description: 'تعلم حيل التباديل والتوافيق باأدق صورها ', file: 'التباديل والتوافيق.pdf' }
-   'reference-06': { title: 'الدوال والنهايات - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصصة', description: 'الدوال والنهايات - شرح مثالي', file: 'مذكرة دوال والنهايات .pdf' }
+   'reference-06': { title: 'الدوال والنهايات - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصصة', description: 'الدوال والنهايات - شرح مثالي', file: 'PDF3.pdf' }
    'reference-07': { title: 'الاحصاء - الرياضيات الاساسية', kind: 'مذكرة', subject: 'الرياضيات الاساسية', description: 'تعرف على تاثير الاحصاء في حياتنا اليومية', file: 'مذكرة الإحصاء مدرسة المعالي.pdf' }
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
