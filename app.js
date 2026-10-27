@@ -78,7 +78,7 @@ for (let i = 1; i <= 7; i++) {
 const LIBRARY_OVERRIDES = {
   // 'grade1-01': { title: 'الرياضيات — الصف الأول', subject: 'رياضيات', description: 'الكتاب المدرسي المعتمد.', file: 'assets/pdfs/grade-one-math.pdf' },
   'grade2-01': { title: 'العلوم الهندسية — الصف الثاني', subject: 'الهندسية', description: 'كتاب العلوم الهندسية للصف الثاني مقرر جديد كليا.', file: 'PDF8.pdf' },
-  'grade2-01': { title: 'الرياضيات — الصف الثاني', subject: 'الرياضيات', description: 'كتاب العلوم الرياضيات للصف الثاني مقرر جديد كليا.', file: 'PDF9.pdf' },
+  'grade2-02': { title: 'الرياضيات — الصف الثاني', subject: 'الرياضيات', description: 'كتاب العلوم الرياضيات للصف الثاني مقرر جديد كليا.', file: 'PDF9.pdf' },
 
   'grade3-eng-01': {
     title: 'العلوم الهندسية',
