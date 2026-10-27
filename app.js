@@ -78,18 +78,97 @@ for (let i = 1; i <= 20; i++) {
 const LIBRARY_OVERRIDES = {
   // 'grade1-01': { title: 'الرياضيات — الصف الأول', subject: 'رياضيات', description: 'الكتاب المدرسي المعتمد.', file: 'assets/pdfs/grade-one-math.pdf' },
   // 'grade2-01': { title: 'اسم الكتاب — الصف الثاني', subject: 'اسم المادة', description: 'وصف مختصر للكتاب.', file: 'assets/pdfs/grade-two-book.pdf' },
-   'grade3-eng-01': { title: 'العلوم الهندسية', subject: 'الهندسية', description: 'العلوم الهندسية - كتاب مدرسي قومي', file: 'engineering.pdf' },
-   'grade3-eng-02': { title: 'اللغة الانجليزية', subject: 'الهندسية', description: 'معظم الناس عندها عقدة من الانجليزي لكن هنا تجد الحل', file: 'English.pdf' },
-   'grade3-eng-03': { title: 'الرياضيات المتخصصة', subject: 'مشترك', description: 'الرياضيات ممارسة وليست حفظ', file: 'mathematics-specialized.pdf' },
-   'grade3-eng-04': { title: 'الرياضيات الاساسية', subject: 'مشترك', description: 'رياضيات اساسية ومتعة', file: 'mathematics-basic.pdf' },
-   'grade3-eng-05': { title: 'الفيزياء', subject: 'مشترك', description: 'تعلم كيف تجري الحياة حولك بقوانينها', file: 'physics.pdf' },
-   'reference-01': { title: 'grammar - اللغة الانجليزية', kind: 'مذكرة', subject: 'اللغة الانجليزية', description: 'اساسيات اللغة الانجليزية بين يديك وفي مكان واحد', file: 'grammar.pdf' }
-   'reference-02': { title: 'التفاضل - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصصة', description: 'تعلم اشتقاق الدوال بسهولة وسرعة', file: 'التفاضل وتطبيقاته.pdf' }
-   'reference-03': { title: 'التكامل - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصص', description: 'التكامل هو عملية عكسية للتفاضل', file: 'PDF1.pdf' }
-   'reference-04': { title: 'الدائرة - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصصة', description: 'الدائرة بشرح مبسط وانيق', file: 'PDF2.pdf.' }
-   'reference-05': { title: 'التباديل والتوافيق - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات الاساسية', description: 'تعلم حيل التباديل والتوافيق باأدق صورها ', file: 'التباديل والتوافيق.pdf' }
-   'reference-06': { title: 'الدوال والنهايات - الرياضيات المتخصصة', kind: 'مذكرة', subject: 'الرياضيات المتخصصة', description: 'الدوال والنهايات - شرح مثالي', file: 'PDF3.pdf' }
-   'reference-07': { title: 'الاحصاء - الرياضيات الاساسية', kind: 'مذكرة', subject: 'الرياضيات الاساسية', description: 'تعرف على تاثير الاحصاء في حياتنا اليومية', file: 'مذكرة الإحصاء مدرسة المعالي.pdf' }
+
+  'grade3-eng-01': {
+    title: 'العلوم الهندسية',
+    subject: 'الهندسية',
+    description: 'العلوم الهندسية - كتاب مدرسي قومي',
+    file: 'engineering.pdf'
+  },
+
+  'grade3-eng-02': {
+    title: 'اللغة الانجليزية',
+    subject: 'الهندسية',
+    description: 'معظم الناس عندها عقدة من الانجليزي لكن هنا تجد الحل',
+    file: 'English.pdf'
+  },
+
+  'grade3-eng-03': {
+    title: 'الرياضيات المتخصصة',
+    subject: 'مشترك',
+    description: 'الرياضيات ممارسة وليست حفظ',
+    file: 'mathematics-specialized.pdf'
+  },
+
+  'grade3-eng-04': {
+    title: 'الرياضيات الاساسية',
+    subject: 'مشترك',
+    description: 'رياضيات اساسية ومتعة',
+    file: 'mathematics-basic.pdf'
+  },
+
+  'grade3-eng-05': {
+    title: 'الفيزياء',
+    subject: 'مشترك',
+    description: 'تعلم كيف تجري الحياة حولك بقوانينها',
+    file: 'physics.pdf'
+  },
+
+  'reference-01': {
+    title: 'grammar - اللغة الانجليزية',
+    kind: 'مذكرة',
+    subject: 'اللغة الانجليزية',
+    description: 'اساسيات اللغة الانجليزية بين يديك وفي مكان واحد',
+    file: 'grammar.pdf'
+  },
+
+  'reference-02': {
+    title: 'التفاضل - الرياضيات المتخصصة',
+    kind: 'مذكرة',
+    subject: 'الرياضيات المتخصصة',
+    description: 'تعلم اشتقاق الدوال بسهولة وسرعة',
+    file: 'التفاضل وتطبيقاته.pdf'
+  },
+
+  'reference-03': {
+    title: 'التكامل - الرياضيات المتخصصة',
+    kind: 'مذكرة',
+    subject: 'الرياضيات المتخصص',
+    description: 'التكامل هو عملية عكسية للتفاضل',
+    file: 'PDF1.pdf'
+  },
+
+  'reference-04': {
+    title: 'الدائرة - الرياضيات المتخصصة',
+    kind: 'مذكرة',
+    subject: 'الرياضيات المتخصصة',
+    description: 'الدائرة بشرح مبسط وانيق',
+    file: 'PDF2.pdf'
+  },
+
+  'reference-05': {
+    title: 'التباديل والتوافيق - الرياضيات المتخصصة',
+    kind: 'مذكرة',
+    subject: 'الرياضيات الاساسية',
+    description: 'تعلم حيل التباديل والتوافيق باأدق صورها ',
+    file: 'التباديل والتوافيق.pdf'
+  },
+
+  'reference-06': {
+    title: 'الدوال والنهايات - الرياضيات المتخصصة',
+    kind: 'مذكرة',
+    subject: 'الرياضيات المتخصصة',
+    description: 'الدوال والنهايات - شرح مثالي',
+    file: 'PDF3.pdf'
+  },
+
+  'reference-07': {
+    title: 'الاحصاء - الرياضيات الاساسية',
+    kind: 'مذكرة',
+    subject: 'الرياضيات الاساسية',
+    description: 'تعرف على تاثير الاحصاء في حياتنا اليومية',
+    file: 'مذكرة الإحصاء مدرسة المعالي.pdf'
+  }
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
   const item = LIBRARY_ITEMS.find(entry => entry.id === id);
