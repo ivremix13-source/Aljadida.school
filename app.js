@@ -9,9 +9,9 @@
 const SCHOOL_CONFIG = {
   name: 'مدرسة الجديدة النموذجية بنين',
   shortName: 'الجديدة النموذجية',
-  phone: '',                 // مثال: 2499XXXXXXXX
-  whatsapp: '',              // مثال: 2499XXXXXXXX — أرقام فقط مع مفتاح الدولة
-  email: '',                 // البريد الرسمي لاستقبال الاستفسارات
+  phone: '0999498099',                 // مثال: 2499XXXXXXXX
+  whatsapp: '0999498099',              // مثال: 2499XXXXXXXX — أرقام فقط مع مفتاح الدولة
+  email: 'info.@gmail.com',                 // البريد الرسمي لاستقبال الاستفسارات
   facebook: '',              // رابط صفحة فيسبوك
   tiktok: '',                // رابط حساب تيك توك
   mapUrl: 'https://maps.app.goo.gl/nnQWoAyM3yQpdVzS7?g_st=ac',
@@ -28,7 +28,7 @@ const SCHOOL_CONFIG = {
 const ANNOUNCEMENTS = [
   { icon: 'fa-bullhorn', text: 'ستقام الامتحانات الشهرية الاولى في تاريخ /29/11/2026.' },
   { icon: 'fa-book-open', text: 'المكتبة الرقمية جاهزة للاستخدام.' },
-  { icon: 'fa-calendar-check', text: 'سيتم نشر جداول الحصص والتقويم المدرسي في قسم الجداول عند اعتمادها.' }
+  { icon: 'fa-calendar-check', text: 'يجب على قرشي تعويض الطلاب عبدالله بكوب قهوة كبييير جدا.' }
 ];
 
 // عناصر المكتبة: املأ title وdescription وfile لكل كتاب.
@@ -51,7 +51,7 @@ function addLibrarySlots({ count, idPrefix, grade, stream = '', kind = 'كتاب
 }
 
 // الصف الأول: 13 كتاباً.
-addLibrarySlots({ count: 13, idPrefix: 'grade1', grade: 'الصف الأول', titlePrefix: 'كتاب الصف الأول' });
+addLibrarySlots({ count: 04, idPrefix: 'grade1', grade: 'الصف الأول', titlePrefix: 'كتاب الصف الأول' });
 // الصف الثاني: 13 كتاباً.
 addLibrarySlots({ count: 03, idPrefix: 'grade2', grade: 'الصف الثاني', titlePrefix: 'كتاب الصف الثاني' });
 // الصف الثالث: 10 كتب لكل مسار، حتى تكون مواد كل مسار مستقلة ومنظمة.
@@ -76,7 +76,11 @@ for (let i = 1; i <= 7; i++) {
 // تخصيص الخانات فردياً: أزل التعليق عن السطر الذي تريد استخدامه ثم عدّل بياناته.
 // لا تحتاج إلى تعديل دالة إنشاء الخانات؛ أضف أي عدد من العناصر داخل هذا الكائن.
 const LIBRARY_OVERRIDES = {
-  // 'grade1-01': { title: 'الرياضيات — الصف الأول', subject: 'رياضيات', description: 'الكتاب المدرسي المعتمد.', file: 'assets/pdfs/grade-one-math.pdf' },
+  'grade1-01': { title: 'الرياضيات — الصف الأول', subject: 'رياضيات', description: 'كتاب الرياضيات للصف الاول ثانوي مقرر جديد كليا.', file: 'Math1.pdf' },
+  'grade1-02': { title: 'اللغة العربية — الصف الأول', subject: 'لغة عربية', description: 'كتاب اللغة العربية للصف الاول ثانوي مقرر جديد كليا.', file: 'Adab.pdf' },
+  'grade1-03': { title: 'الكيمياء — الصف الأول', subject: 'كيمياء', description: 'كتاب الكيمياء للصف الاول ثانوي مقرر جديد كليا.', file: 'Chemistry.pdf' },
+  'grade1-04': { title: 'الاحياء — الصف الأول', subject: 'احياء', description: 'كتاب الاحياء للصف الاول ثانوي مقرر جديد كليا.', file: 'Pio1.pdf' },
+  
   'grade2-01': { title: 'العلوم الهندسية — الصف الثاني', subject: 'الهندسية', description: 'كتاب العلوم الهندسية للصف الثاني مقرر جديد كليا.', file: 'PDF8.pdf' },
   'grade2-02': { title: 'الرياضيات — الصف الثاني', subject: 'الرياضيات', description: 'كتاب العلوم الرياضيات للصف الثاني مقرر جديد كليا.', file: 'PDF9.pdf' },
   'grade2-03': { title: 'اللغة العربية — الصف الثاني', subject: 'اللغة العربية', description: 'كتاب اللغة العربية للصف الثاني مقرر جديد كليا.', file: 'PDF10.pdf' },
