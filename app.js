@@ -26,9 +26,9 @@ const SCHOOL_CONFIG = {
 
 // الإعلانات تتحكم بها من هنا. احذف أو أضف عناصر حسب الحاجة.
 const ANNOUNCEMENTS = [
-  { icon: 'fa-bullhorn', text: 'ستقام الامتحانات الشهرية الاولى في تاريخ /29/11/2026.' },
-  { icon: 'fa-book-open', text: 'المكتبة الرقمية جاهزة للاستخدام.' },
-  { icon: 'fa-calendar-check', text: 'يجب على قرشي تعويض الطلاب عبدالله بكوب قهوة كبييير جدا.' }
+  { icon: 'fa-bullhorn', text: 'ستقام امتحانات الفترة الاولى في الثاني من يناير 2026.' },
+  { icon: 'fa-book-open', text: 'قرشي ي زول داير حقي.' },
+  { icon: 'fa-calendar-check', text: 'الموقع قيد التطوير.' }
 ];
 
 // عناصر المكتبة: املأ title وdescription وfile لكل كتاب.
@@ -60,7 +60,7 @@ addLibrarySlots({ count: 00, idPrefix: 'grade3-science', grade: 'الصف الث
 addLibrarySlots({ count: 00, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
 const referenceKinds = ['مرجع', 'مذكرة', 'امتحان سابق', 'ملخص'];
-for (let i = 1; i <= 7; i++) {
+for (let i = 1; i <= 10; i++) {
   LIBRARY_ITEMS.push({
     id: `reference-${String(i).padStart(2, '0')}`,
     title: `أضف عنوان المرجع أو المذكرة (${String(i).padStart(2, '0')})`,
@@ -174,8 +174,30 @@ const LIBRARY_OVERRIDES = {
     subject: 'الرياضيات الاساسية',
     description: 'تعرف على تاثير الاحصاء في حياتنا اليومية',
     file: 'PDF4.pdf'
-  }
+  },
+  
+   'reference-08': {
+    title: 'الخوارزميات في باسكال - علوم الحاسوب',
+    kind: 'مذكرة',
+    subject: 'علوم الحاسوب',
+    description: 'شرح مبسط وتفصيلي',
+    file: 'Bascal.pdf'
+   },
    
+   'reference-09': {
+    title: 'لغة البرمجة في باسكال - علوم الحاسوب',
+    kind: 'مذكرة',
+    subject: 'علوم الحاسوب',
+    description: 'البرمجة اسهل من ما تعتقد',
+    file: 'Techla.pdf'
+   },
+   'reference-10': {
+    title: 'تعريفات الحاسوب - علوم الحاسوب',
+    kind: 'مذكرة',
+    subject: 'علوم الحاسوب',
+    description: 'جميع تعريفات كتاب علوم الحاسوب في مكان واحد',
+    file: 'Tech1.pdf'
+   }
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
   const item = LIBRARY_ITEMS.find(entry => entry.id === id);
