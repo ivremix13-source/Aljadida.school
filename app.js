@@ -12,8 +12,8 @@ const SCHOOL_CONFIG = {
   phone: '0999498099',                 // مثال: 2499XXXXXXXX
   whatsapp: '0999498099',              // مثال: 2499XXXXXXXX — أرقام فقط مع مفتاح الدولة
   email: 'info.@gmail.com',                 // البريد الرسمي لاستقبال الاستفسارات
-  facebook: '',              // رابط صفحة فيسبوك
-  tiktok: '',                // رابط حساب تيك توك
+  facebook: 'not found',              // رابط صفحة فيسبوك
+  tiktok: 'https://www.tiktok.com/@black_a249?_r=1&_t=ZS-9AvJ4yCs8v9',                // رابط حساب تيك توك
   mapUrl: 'https://maps.app.goo.gl/nnQWoAyM3yQpdVzS7?g_st=ac',
   // الأرقام التالية معروضة كحقول قابلة للتعديل، لا تُترك أرقاماً تقديرية على الموقع المنشور.
   stats: [
@@ -60,7 +60,7 @@ addLibrarySlots({ count: 10, idPrefix: 'grade3-science', grade: 'الصف الث
 addLibrarySlots({ count: 10, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
 const referenceKinds = ['مرجع', 'مذكرة', 'امتحان سابق', 'ملخص'];
-for (let i = 1; i <= 7; i++) {
+for (let i = 1; i <= 8; i++) {
   LIBRARY_ITEMS.push({
     id: `reference-${String(i).padStart(2, '0')}`,
     title: `أضف عنوان المرجع أو المذكرة (${String(i).padStart(2, '0')})`,
@@ -175,6 +175,15 @@ const LIBRARY_OVERRIDES = {
     description: 'تعرف على تاثير الاحصاء في حياتنا اليومية',
     file: 'PDF4.pdf'
   }
+
+   'reference-08': {
+    title: 'مراجعة في لغة باسكال علوم الحاسوب',
+    kind: 'مذكرة',
+    subject: 'علوم الحاسوب',
+    description: 'علوم الحاسوب - شرح مثالي',
+    file: 'Bascal.pdf'
+   },
+   
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
   const item = LIBRARY_ITEMS.find(entry => entry.id === id);
