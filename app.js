@@ -26,9 +26,9 @@ const SCHOOL_CONFIG = {
 
 // الإعلانات تتحكم بها من هنا. احذف أو أضف عناصر حسب الحاجة.
 const ANNOUNCEMENTS = [
-  { icon: 'fa-bullhorn', text: 'ستقام امتحانات الفترة الاولى في الثاني من يناير 2026.' },
-  { icon: 'fa-book-open', text: 'قرشي ي زول داير حقي.' },
-  { icon: 'fa-calendar-check', text: 'الموقع قيد التطوير.' }
+  { icon: 'fa-bullhorn', text: 'ستقام امتحانات الفترة الاولى في الثاني من يناير 2027.' },
+  { icon: 'fa-book-open', text: 'ستتم اضافة حصتين كيمياء يوم الخميس لفصل هندسية اتحاد.' },
+  { icon: 'fa-calendar-check', text: 'قسم المذكرات متاح الان.' }
 ];
 
 // عناصر المكتبة: املأ title وdescription وfile لكل كتاب.
@@ -51,11 +51,11 @@ function addLibrarySlots({ count, idPrefix, grade, stream = '', kind = 'كتاب
 }
 
 // الصف الأول: 13 كتاباً.
-addLibrarySlots({ count: 04, idPrefix: 'grade1', grade: 'الصف الأول', titlePrefix: 'كتاب الصف الأول' });
+addLibrarySlots({ count: 00, idPrefix: 'grade1', grade: 'الصف الأول', titlePrefix: 'كتاب الصف الأول' });
 // الصف الثاني: 13 كتاباً.
-addLibrarySlots({ count: 03, idPrefix: 'grade2', grade: 'الصف الثاني', titlePrefix: 'كتاب الصف الثاني' });
+addLibrarySlots({ count: 00, idPrefix: 'grade2', grade: 'الصف الثاني', titlePrefix: 'كتاب الصف الثاني' });
 // الصف الثالث: 10 كتب لكل مسار، حتى تكون مواد كل مسار مستقلة ومنظمة.
-addLibrarySlots({ count: 05, idPrefix: 'grade3-eng', grade: 'الصف الثالث', stream: 'المسار الهندسي', titlePrefix: 'كتاب المسار الهندسي' });
+addLibrarySlots({ count: 00, idPrefix: 'grade3-eng', grade: 'الصف الثالث', stream: 'المسار الهندسي', titlePrefix: 'كتاب المسار الهندسي' });
 addLibrarySlots({ count: 00, idPrefix: 'grade3-science', grade: 'الصف الثالث', stream: 'مسار علوم الحاسوب / الأحياء', titlePrefix: 'كتاب مسار علوم الحاسوب / الأحياء' });
 addLibrarySlots({ count: 00, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
@@ -217,11 +217,11 @@ const ACTIVITIES = [
 
 // لوحة الشرف: غيّر الاسم والصف والإنجاز، وأضف عناصر جديدة عند الحاجة.
 const HONOR_STUDENTS = [
-  { name: 'أ.خالد حمتو', grade: 'رياضيات', achievement: 'مدير المدرسة' },
-  { name: 'أ.عادل عبيد', grade: 'اللغة العربية', achievement: 'وكيل المدرسة' },
+  { name: 'أ.خالد حمتو', grade: 'رياضيات', achievement: 'مدير المدرسة / خبرة في الرياضيات' },
+  { name: 'أ.عادل عبيد', grade: 'اللغة العربية', achievement: 'وكيل المدرسة / ومن افضل مدرسي اللغة العربية' },
   { name: 'أ.نادر حسين', grade: 'الفيزياء', achievement: 'من افضل مدرسي الفيزياء في السودان' },
   { name: 'أ.نصرالدين', grade: 'الكيمياء', achievement: 'الخبرة والتنوع في طريقة التدريس في شخص واحد' },
-  { name: 'أ.اسماء خليفة', grade: 'الكيمياء', achievement: 'امراة علمت وربت اجيال بطريقة تدريسها' },
+  { name: 'أ.اسماء خليفة', grade: 'الكيمياء', achievement: 'شرح انيق وذكي' },
   { name: 'أ.لنا فيصل', grade: 'علوم الحاسوب', achievement: 'طريقك في البرمجة يُنار بها' },
   { name: 'أ.زبيدة', grade: 'التربية الاسلامية', achievement: 'شرحها يكفي لبقية حياتك' },
   { name: 'أ.احمد اسد', grade: 'العلوم الهندسية', achievement: 'الهندسة والاخلاق والذكاء يجتمعون فيه' }
