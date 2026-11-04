@@ -60,7 +60,7 @@ addLibrarySlots({ count: 00, idPrefix: 'grade3-science', grade: 'الصف الث
 addLibrarySlots({ count: 00, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
 const referenceKinds = ['مرجع', 'مذكرة', 'امتحان سابق', 'ملخص'];
-for (let i = 1; i <= 21; i++) {
+for (let i = 1; i <= 34; i++) {
   LIBRARY_ITEMS.push({
     id: `reference-${String(i).padStart(2, '0')}`,
     title: `أضف عنوان المرجع أو المذكرة (${String(i).padStart(2, '0')})`,
@@ -276,6 +276,97 @@ const LIBRARY_OVERRIDES = {
     subject: 'اللغة العربية',
     description: 'قواعد النحو بطريقة مبسطة',
     file: 'nho.pdf'
+   },
+ 'reference-22': {
+    title: 'داعية السلام - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح دقيق لداعية السلام',
+    file: 'daiyaalslam.pdf'
+   },
+   'reference-23': {
+    title: 'قيم ومثل - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح دقيق ومسط لقيم ومثل',
+    file: 'gyamwamthl.pdf'
+   },
+   'reference-24': {
+    title: 'فارس بن عبس - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح دقيق لفارس بن عبس',
+    file: 'farisebnebs.pdf'
+   },
+'reference-25': {
+    title: 'علمت نفسي مكان دوائيا - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح قصيدة علمت نفسي مكان دوائيا',
+    file: 'almetnfse.pdf'
+   },
+   'reference-26': {
+    title: 'في الفخر والمدح - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح في الفخر والمدح',
+    file: 'alfakherwaalmadh.pdf'
+   },
+'reference-27': {
+    title: 'في النفس حاجات - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح قصيدة في النفس حاجات',
+    file: 'fealnfshajat.pdf'
+   },
+'reference-28': {
+    title: 'جرير يمدح - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح قصيدة جرير يمدح',
+    file: 'jreryamdh.pdf'
+   },
+'reference-29': {
+    title: 'يوم الفرقان - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح قصيدة يوم الفرقان',
+    file: 'yomalfrqan.pdf'
+   },
+  'reference-30': {
+    title: 'هم الانصار - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح قصيدة هم الانصار ',
+    file: 'homalansar.pdf'
+   },
+'reference-31': {
+    title: 'كتاب عمر - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح كتاب عمر',
+    file: 'ktabomer.pdf'
+   },
+'reference-32': {
+    title: 'علم البيان - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح تفصيلي ودقيق',
+    file: 'elmalbyan.pdf'
+   },
+   'reference-33': {
+    title: 'مذكرة المجاليات في البلاغة - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'من افضل المذكرات في علم البلاغة',
+    file: 'almjalyat.pdf'
+   },
+   'reference-34': {
+    title: 'مذكرة الفارس - التاريخ',
+    kind: 'مذكرة',
+    subject: 'التاريخ',
+    description: 'مذكرة مفيدة للتاريخ للصف الثالث ثانوي',
+    file: 'alfarisfealtarehk.pdf'
    }
    
 };
