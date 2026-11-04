@@ -60,7 +60,7 @@ addLibrarySlots({ count: 00, idPrefix: 'grade3-science', grade: 'الصف الث
 addLibrarySlots({ count: 00, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
 const referenceKinds = ['مرجع', 'مذكرة', 'امتحان سابق', 'ملخص'];
-for (let i = 1; i <= 10; i++) {
+for (let i = 1; i <= 19; i++) {
   LIBRARY_ITEMS.push({
     id: `reference-${String(i).padStart(2, '0')}`,
     title: `أضف عنوان المرجع أو المذكرة (${String(i).padStart(2, '0')})`,
