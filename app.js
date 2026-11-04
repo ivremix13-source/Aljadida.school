@@ -55,9 +55,9 @@ addLibrarySlots({ count: 05, idPrefix: 'grade1', grade: 'الصف الأول', t
 // الصف الثاني: 13 كتاباً.
 addLibrarySlots({ count: 03, idPrefix: 'grade2', grade: 'الصف الثاني', titlePrefix: 'كتاب الصف الثاني' });
 // الصف الثالث: 10 كتب لكل مسار، حتى تكون مواد كل مسار مستقلة ومنظمة.
-addLibrarySlots({ count: 05, idPrefix: 'grade3-eng', grade: 'الصف الثالث', stream: 'المسار الهندسي', titlePrefix: 'كتاب المسار الهندسي' });
-addLibrarySlots({ count: 00, idPrefix: 'grade3-science', grade: 'الصف الثالث', stream: 'مسار علوم الحاسوب / الأحياء', titlePrefix: 'كتاب مسار علوم الحاسوب / الأحياء' });
-addLibrarySlots({ count: 00, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
+addLibrarySlots({ count: 09, idPrefix: 'grade3-eng', grade: 'الصف الثالث', stream: 'المسار الهندسي', titlePrefix: 'كتاب المسار الهندسي' });
+addLibrarySlots({ count: 07, idPrefix: 'grade3-science', grade: 'الصف الثالث', stream: 'مسار علوم الحاسوب / الأحياء', titlePrefix: 'كتاب مسار علوم الحاسوب / الأحياء' });
+addLibrarySlots({ count: 06, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
 const referenceKinds = ['مرجع', 'مذكرة', 'امتحان سابق', 'ملخص'];
 for (let i = 1; i <= 34; i++) {
@@ -101,23 +101,57 @@ const LIBRARY_OVERRIDES = {
     file: 'English.pdf'
   },
 
+  'grade3-literary-01': {
+    title: 'اللغة الانجليزية',
+    subject: 'الادبي',
+    description: 'معظم الناس عندها عقدة من الانجليزي لكن هنا تجد الحل',
+    file: 'English.pdf'
+  },
+ 
+   'grade3-science-01': {
+    title: 'اللغة الانجليزية',
+    subject: 'حاسوب / احياء',
+    description: 'معظم الناس عندها عقدة من الانجليزي لكن هنا تجد الحل',
+    file: 'English.pdf'
+  },
+   
   'grade3-eng-03': {
     title: 'الرياضيات المتخصصة',
-    subject: 'مشترك',
+    subject: 'هندسية',
+    description: 'الرياضيات ممارسة وليست حفظ',
+    file: 'mathematics-specialized.pdf'
+  },
+   'grade3-science-02': {
+    title: 'الرياضيات المتخصصة',
+    subject: 'حاسوب / احياء',
     description: 'الرياضيات ممارسة وليست حفظ',
     file: 'mathematics-specialized.pdf'
   },
 
   'grade3-eng-04': {
     title: 'الرياضيات الاساسية',
-    subject: 'مشترك',
+    subject: 'هندسية',
     description: 'رياضيات اساسية ومتعة',
     file: 'mathematics-basic.pdf'
   },
 
+   'grade3-science-03': {
+    title: 'الرياضيات الاساسية',
+    subject: 'حاسوب / احياء',
+    description: 'رياضيات اساسية ومتعة',
+    file: 'mathematics-basic.pdf'
+  },
+   
   'grade3-eng-05': {
     title: 'الفيزياء',
-    subject: 'مشترك',
+    subject: 'هندسية',
+    description: 'تعلم كيف تجري الحياة حولك بقوانينها',
+    file: 'physics.pdf'
+  },
+
+   'grade3-science-04': {
+    title: 'الفيزياء',
+    subject: 'حاسوب احياء',
     description: 'تعلم كيف تجري الحياة حولك بقوانينها',
     file: 'physics.pdf'
   },
@@ -367,7 +401,86 @@ const LIBRARY_OVERRIDES = {
     subject: 'التاريخ',
     description: 'مذكرة مفيدة للتاريخ للصف الثالث ثانوي',
     file: 'alfarisfealtarehk.pdf'
-   }
+   },
+   'grade3-eng-06': {
+    title: 'قواعد النحو - الصف الثالث',
+    subject: 'هندسية',
+    description: 'كتاب قواعد النحو الصف الثالث ثانوي',
+    file: 'qwaidnho.pdf'
+    },
+'grade3-eng-07': {
+    title: 'البلاغة - الصف الثالث',
+    subject: 'هندسية',
+    description: 'كتاب البلاغة والتعبير الصف الثالث ثانوي',
+    file: 'ktabalblaga.pdf'
+  },
+'grade3-science-05': {
+    title: 'الاحياء - الصف الثالث',
+    subject: 'احياء',
+    description: 'كتاب الاحيار للصف الثالث ثانوي',
+    file: 'ktabalahya.7z'
+  },
+'grade3-literary-02': {
+    title: 'الجغرافيا - الصف الثالث',
+    subject: 'ادبي',
+    description: 'كتاب الجغرافيا للمسار الادبي الصف الثالث ثانوي',
+    file: 'ktabaljografya.pdf'
+  },
+'grade3-literary-03': {
+    title: 'الرياضيات (ادبي) - الصف الثالث',
+    subject: 'ادبي',
+    description: 'كتاب الرياضيات الاساسية للمسار الادبي الصف الثالث ثانوي',
+    file: 'ktabalradyat.pdf'
+  },
+'grade3-eng-09': {
+    title: 'المطالعة والادب - الصف الثالث',
+    subject: 'هندسية',
+    description: 'كتاب المطالعة والادب للصف الثالث ثانوي',
+    file: 'aladabbb.pdf'
+  },
+
+   'grade3-literary-04': {
+    title: 'المطالعة والادب - الصف الثالث',
+    subject: 'ادبي',
+    description: 'كتاب المطالعة والادب للصف الثالث ثانوي',
+    file: 'aladabbb.pdf'
+  },
+   'grade3-science-06': {
+    title: 'المطالعة والادب - الصف الثالث',
+    subject: 'حاسوب / احياء',
+    description: 'كتاب المطالعة والادب للصف الثالث ثانوي',
+    file: 'aladabbb.pdf'
+  },
+   'grade3-eng-10': {
+    title: 'الكيمياء - الصف الثالث',
+    subject: 'هندسية',
+    description: 'كتاب الكيمياء للصف الثالث ثانوي',
+    file: 'ktabalkemya.7z'
+  },
+   'grade3-science-07': {
+    title: 'الكيمياء - الصف الثالث',
+    subject: 'حاسوب / احياء',
+    description: 'كتاب الكيمياء للصف الثالث ثانوي',
+    file: 'ktabalkemya.7z'
+  },
+'grade3-literary-05': {
+    title: 'مادة الفنون - الصف الثالث',
+    subject: 'ادبي',
+    description: 'كتاب الفنون للمسار الادبي الصف الثالث',
+    file: 'alfnon.pdf'
+  },
+'grade3-literary-06': {
+    title: 'الدراسات الاسلامية - الصف الثالث',
+    subject: 'ادبي',
+    description: 'كتاب الدراسات الاسلامية للصف الثالث ثانوي - مادة اختيارية',
+    file: 'drasat.pdf'
+  },
+'grade3-science-08': {
+    title: 'علوم الحاسوب - الصف الثالث',
+    subject: 'علوم حاسوب',
+    description: 'كتاب علوم الحاسوب الصف الثالث ثانوي',
+    file: 'olomalhasob.pdf'
+  },
    
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
