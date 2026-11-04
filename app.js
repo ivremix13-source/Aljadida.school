@@ -269,7 +269,7 @@ const LIBRARY_OVERRIDES = {
     subject: 'اللغة العربية',
     description: 'شرح مفصل ودقيق لكتاب البلاغة',
     file: 'الواضح في البلاغه).pdf'
-  },
+   },
    'reference-21': {
     title: 'الواضح في القواعد - اللغة العربية',
     kind: 'مذكرة',
@@ -277,6 +277,7 @@ const LIBRARY_OVERRIDES = {
     description: 'قواعد النحو بطريقة مبسطة',
     file: 'الواضح في النحو).pdf'
    }
+   
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
   const item = LIBRARY_ITEMS.find(entry => entry.id === id);
