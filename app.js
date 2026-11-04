@@ -60,7 +60,7 @@ addLibrarySlots({ count: 00, idPrefix: 'grade3-science', grade: 'الصف الث
 addLibrarySlots({ count: 00, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
 const referenceKinds = ['مرجع', 'مذكرة', 'امتحان سابق', 'ملخص'];
-for (let i = 1; i <= 19; i++) {
+for (let i = 1; i <= 21; i++) {
   LIBRARY_ITEMS.push({
     id: `reference-${String(i).padStart(2, '0')}`,
     title: `أضف عنوان المرجع أو المذكرة (${String(i).padStart(2, '0')})`,
@@ -263,8 +263,20 @@ const LIBRARY_OVERRIDES = {
     description: 'شرح مبسط وانيق',
     file: 'mlltyar.pdf'
   },
-
-   
+'reference-20': {
+    title: 'الواضح في البلاغة - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'شرح مفصل ودقيق لكتاب البلاغة',
+    file: 'الواضح في البلاغه).pdf'
+  },
+   'reference-21': {
+    title: 'الواضح في القواعد - اللغة العربية',
+    kind: 'مذكرة',
+    subject: 'اللغة العربية',
+    description: 'قواعد النحو بطريقة مبسطة',
+    file: 'الواضح في النحو).pdf'
+   }
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
   const item = LIBRARY_ITEMS.find(entry => entry.id === id);
