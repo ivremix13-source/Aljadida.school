@@ -80,7 +80,7 @@ const LIBRARY_OVERRIDES = {
   'grade1-02': { title: 'اللغة العربية — الصف الأول', subject: 'لغة عربية', description: 'كتاب اللغة العربية للصف الاول ثانوي مقرر جديد كليا.', file: 'Adab.pdf' },
   'grade1-03': { title: 'الكيمياء — الصف الأول', subject: 'كيمياء', description: 'كتاب الكيمياء للصف الاول ثانوي مقرر جديد كليا.', file: 'Chemistry.pdf' },
   'grade1-04': { title: 'الاحياء — الصف الأول', subject: 'احياء', description: 'كتاب الاحياء للصف الاول ثانوي مقرر جديد كليا.', file: 'Pio1.pdf' },
-  'grade1-04': { title: 'التاريخ — الصف الأول', subject: 'التاريخ', description: 'كتاب التاريخ للصف الاول ثانوي مقرر جديد كليا.', file: 'History1.pdf' },
+  'grade1-05': { title: 'التاريخ — الصف الأول', subject: 'التاريخ', description: 'كتاب التاريخ للصف الاول ثانوي مقرر جديد كليا.', file: 'History1.pdf' },
   
    
   'grade2-01': { title: 'العلوم الهندسية — الصف الثاني', subject: 'الهندسية', description: 'كتاب العلوم الهندسية للصف الثاني مقرر جديد كليا.', file: 'PDF8.pdf' },
@@ -199,7 +199,72 @@ const LIBRARY_OVERRIDES = {
     subject: 'علوم الحاسوب',
     description: 'جميع تعريفات كتاب علوم الحاسوب في مكان واحد',
     file: 'Tech1.pdf'
-   }
+   },
+'reference-11': {
+    title: 'الحركة الدائرية المنتظمة - الفيزياء',
+    kind: 'مذكرة',
+    subject: 'الفيزياء',
+    description: 'شرح مفصل ودقيق للحركة الدائرية',
+    file: 'aldaerea.pdf'
+   },
+'reference-12': {
+    title: 'الحركة التوافقية - الفيزياء',
+    kind: 'مذكرة',
+    subject: 'الفيزياء',
+    description: 'الحركة التوافقية اسهل من ما تعتقد',
+    file: 'altwafoqia.pdf'
+   },
+'reference-13': {
+    title: 'الموجات - الفيزياء',
+    kind: 'مذكرة',
+    subject: 'الفيزياء',
+    description: 'شرح انيق ومبسط',
+    file: 'almojat.pdf'
+   },
+  'reference-14': {
+    title: 'الضوء - الفيزياء',
+    kind: 'مذكرة',
+    subject: 'الفيزياء',
+    description: 'تعرف على اسس ميكانيكا الكم ونظرية بلانك',
+    file: 'light3.pdf'
+   },
+'reference-15': {
+    title: 'العدسات - الفيزياء',
+    kind: 'مذكرة',
+    subject: 'الفيزياء',
+    description: 'تعرف على اهمية العدسات في حياتنا اليومية',
+    file: 'adsat.pdf'
+   },
+'reference-16': {
+    title: 'المجموعات البصرية - الفيزياء',
+    kind: 'مذكرة',
+    subject: 'الفيزياء',
+    description: 'شرح مبسط وانيق في المجموعات البصرية',
+    file: 'lightsglgrop.pdf'
+   },
+'reference-17': {
+    title: 'المرايا - الفيزياء',
+    kind: 'مذكرة',
+    subject: 'الفيزياء',
+    description: 'مذكرة جيدة وانصح بها ',
+    file: 'mira.pdf'
+   },
+ 'reference-18': {
+    title: 'الكهربية التيارية - الفيزياء',
+    kind: 'مذكرة',
+    subject: 'الفيزياء',
+    description: 'الكهرباء في حياتنا',
+    file: 'electric-t.pdf'
+   },
+'reference-19': {
+    title: 'المجال المغنطيسي للتيار الكهربي - فيزياء',
+    kind: 'مذكرة',
+    subject: 'الفيزياء',
+    description: 'شرح مبسط وانيق',
+    file: 'mlltyar.pdf'
+  },
+
+   
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
   const item = LIBRARY_ITEMS.find(entry => entry.id === id);
