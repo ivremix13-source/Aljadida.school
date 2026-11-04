@@ -55,7 +55,7 @@ addLibrarySlots({ count: 05, idPrefix: 'grade1', grade: 'الصف الأول', t
 // الصف الثاني: 13 كتاباً.
 addLibrarySlots({ count: 03, idPrefix: 'grade2', grade: 'الصف الثاني', titlePrefix: 'كتاب الصف الثاني' });
 // الصف الثالث: 10 كتب لكل مسار، حتى تكون مواد كل مسار مستقلة ومنظمة.
-addLibrarySlots({ count: 09, idPrefix: 'grade3-eng', grade: 'الصف الثالث', stream: 'المسار الهندسي', titlePrefix: 'كتاب المسار الهندسي' });
+addLibrarySlots({ count: 10, idPrefix: 'grade3-eng', grade: 'الصف الثالث', stream: 'المسار الهندسي', titlePrefix: 'كتاب المسار الهندسي' });
 addLibrarySlots({ count: 07, idPrefix: 'grade3-science', grade: 'الصف الثالث', stream: 'مسار علوم الحاسوب / الأحياء', titlePrefix: 'كتاب مسار علوم الحاسوب / الأحياء' });
 addLibrarySlots({ count: 06, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
