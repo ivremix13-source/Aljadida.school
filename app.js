@@ -51,7 +51,7 @@ function addLibrarySlots({ count, idPrefix, grade, stream = '', kind = 'كتاب
 }
 
 // الصف الأول: 13 كتاباً.
-addLibrarySlots({ count: 04, idPrefix: 'grade1', grade: 'الصف الأول', titlePrefix: 'كتاب الصف الأول' });
+addLibrarySlots({ count: 05, idPrefix: 'grade1', grade: 'الصف الأول', titlePrefix: 'كتاب الصف الأول' });
 // الصف الثاني: 13 كتاباً.
 addLibrarySlots({ count: 03, idPrefix: 'grade2', grade: 'الصف الثاني', titlePrefix: 'كتاب الصف الثاني' });
 // الصف الثالث: 10 كتب لكل مسار، حتى تكون مواد كل مسار مستقلة ومنظمة.
@@ -80,7 +80,9 @@ const LIBRARY_OVERRIDES = {
   'grade1-02': { title: 'اللغة العربية — الصف الأول', subject: 'لغة عربية', description: 'كتاب اللغة العربية للصف الاول ثانوي مقرر جديد كليا.', file: 'Adab.pdf' },
   'grade1-03': { title: 'الكيمياء — الصف الأول', subject: 'كيمياء', description: 'كتاب الكيمياء للصف الاول ثانوي مقرر جديد كليا.', file: 'Chemistry.pdf' },
   'grade1-04': { title: 'الاحياء — الصف الأول', subject: 'احياء', description: 'كتاب الاحياء للصف الاول ثانوي مقرر جديد كليا.', file: 'Pio1.pdf' },
+  'grade1-04': { title: 'التاريخ — الصف الأول', subject: 'التاريخ', description: 'كتاب التاريخ للصف الاول ثانوي مقرر جديد كليا.', file: 'History1.pdf' },
   
+   
   'grade2-01': { title: 'العلوم الهندسية — الصف الثاني', subject: 'الهندسية', description: 'كتاب العلوم الهندسية للصف الثاني مقرر جديد كليا.', file: 'PDF8.pdf' },
   'grade2-02': { title: 'الرياضيات — الصف الثاني', subject: 'الرياضيات', description: 'كتاب العلوم الرياضيات للصف الثاني مقرر جديد كليا.', file: 'PDF9.pdf' },
   'grade2-03': { title: 'اللغة العربية — الصف الثاني', subject: 'اللغة العربية', description: 'كتاب اللغة العربية للصف الثاني مقرر جديد كليا.', file: 'PDF10.pdf' },
