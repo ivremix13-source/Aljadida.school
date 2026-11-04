@@ -268,14 +268,14 @@ const LIBRARY_OVERRIDES = {
     kind: 'مذكرة',
     subject: 'اللغة العربية',
     description: 'شرح مفصل ودقيق لكتاب البلاغة',
-    file: 'الواضح في البلاغه).pdf'
+    file: 'plaga.pdf'
    },
    'reference-21': {
     title: 'الواضح في القواعد - اللغة العربية',
     kind: 'مذكرة',
     subject: 'اللغة العربية',
     description: 'قواعد النحو بطريقة مبسطة',
-    file: 'الواضح في النحو).pdf'
+    file: 'nho.pdf'
    }
    
 };
