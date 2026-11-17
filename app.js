@@ -508,7 +508,9 @@ const HONOR_STUDENTS = [
   { name: 'أ.اسماء خليفة', grade: 'الكيمياء', achievement: 'شرح انيق وذكي' },
   { name: 'أ.لنا فيصل', grade: 'علوم الحاسوب', achievement: 'طريقك في البرمجة يُنار بها' },
   { name: 'أ.زبيدة', grade: 'التربية الاسلامية', achievement: 'شرحها يكفي لبقية حياتك' },
-  { name: 'أ.احمد اسد', grade: 'العلوم الهندسية', achievement: 'الهندسة والاخلاق والذكاء يجتمعون فيه' }
+  { name: 'أ.احمد اسد', grade: 'العلوم الهندسية', achievement: 'الهندسة والاخلاق والذكاء يجتمعون فيه' },
+  { name: 'أ.نهى محمد', grade: 'الرياضيات', achievement: 'معها التفوق بين يديك' },
+  { name: 'أ.هياسم', grade: 'الرياضيات', achievement: 'شرح ذكي وانيق ومتنوع' }
 ];
 
 const $ = (selector, root = document) => root.querySelector(selector);
