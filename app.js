@@ -481,6 +481,27 @@ const LIBRARY_OVERRIDES = {
     description: 'كتاب علوم الحاسوب الصف الثالث ثانوي',
     file: 'olomalhasob.pdf'
   },
+'reference-33': {
+    title: 'ميكانيكا - الهندسية',
+    kind: 'مذكرة',
+    subject: 'العلوم الهندسية',
+    description: 'شرح تفصيلي ودقيق',
+    file: 'mechanic1.pdf'
+   },
+'reference-34': {
+    title: 'ميكانيكا 2 - الهندسية',
+    kind: 'مذكرة',
+    subject: 'العلوم الهندسية',
+    description: 'شرح تفصيلي ودقيق',
+    file: 'mechanic2.pdf'
+   },
+'reference-35': {
+    title: 'مذكرة المعالي - الهندسية',
+    kind: 'مذكرة',
+    subject: 'العلوم الهندسية',
+    description: 'شرح تفصيلي ودقيق',
+    file: 'Almalieng.pdf'
+   }
    
 };
 Object.entries(LIBRARY_OVERRIDES).forEach(([id, changes]) => {
