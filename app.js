@@ -60,7 +60,7 @@ addLibrarySlots({ count: 07, idPrefix: 'grade3-science', grade: 'الصف الث
 addLibrarySlots({ count: 06, idPrefix: 'grade3-literary', grade: 'الصف الثالث', stream: 'المسار الأدبي', titlePrefix: 'كتاب المسار الأدبي' });
 // 20 خانة أولية للمراجع والملازم والامتحانات السابقة، ويمكن زيادة العدد بإضافة استدعاءات أو عناصر.
 const referenceKinds = ['مرجع', 'مذكرة', 'امتحان سابق', 'ملخص'];
-for (let i = 1; i <= 34; i++) {
+for (let i = 1; i <= 35; i++) {
   LIBRARY_ITEMS.push({
     id: `reference-${String(i).padStart(2, '0')}`,
     title: `أضف عنوان المرجع أو المذكرة (${String(i).padStart(2, '0')})`,
@@ -531,7 +531,12 @@ const HONOR_STUDENTS = [
   { name: 'أ.زبيدة', grade: 'التربية الاسلامية', achievement: 'شرحها يكفي لبقية حياتك' },
   { name: 'أ.احمد اسد', grade: 'العلوم الهندسية', achievement: 'الهندسة والاخلاق والذكاء يجتمعون فيه' },
   { name: 'أ.نهى محمد', grade: 'الرياضيات', achievement: 'معها التفوق بين يديك' },
-  { name: 'أ.هياسم', grade: 'الرياضيات', achievement: 'شرح ذكي وانيق ومتنوع' }
+  { name: 'أ.هياسم', grade: 'الرياضيات', achievement: 'شرح ذكي وانيق ومتنوع' },
+  { name: 'أ.غادة جمال', grade: 'الرياضيات', achievement: '...' },
+  { name: 'أ.مجدي', grade: 'اللغة الانجليزية', achievement: 'اللغة الانجليزية بشرح انيق ومبسط' },
+  { name: 'أ.نعمات محسن', grade: 'الاحياء', achievement: '...' },
+  { name: 'أ.فيصل الشريف', grade: 'اللغة الانجليزية', achievement: 'شرح ذكي وانيق ومتنوع' }
+
 ];
 
 const $ = (selector, root = document) => root.querySelector(selector);
